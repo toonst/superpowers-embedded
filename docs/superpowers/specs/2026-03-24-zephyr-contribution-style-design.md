@@ -239,3 +239,11 @@ Banned terms with required replacements:
 - **Contribution process guidance** — PR etiquette, reviewer interaction, RFC workflow. Out of scope; this skill is about code quality, not process.
 - **General embedded best practices** — "Check malloc for NULL", "prefer stack allocation". The LLM already knows these.
 - **KeepSorted, Coverity, CI details** — Runtime tooling the contributor interacts with directly, not something the LLM needs to encode.
+
+## Sources
+
+The rules in this spec are derived from the Zephyr contribution documentation. The implementing LLM should consult these for exact details and edge cases:
+
+- Contributing overview: https://docs.zephyrproject.org/latest/contribute/index.html
+- Contribution guidelines: https://docs.zephyrproject.org/latest/contribute/guidelines.html
+- Coding guidelines: https://docs.zephyrproject.org/latest/contribute/coding_guidelines/index.html
