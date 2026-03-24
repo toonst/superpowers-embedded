@@ -6,8 +6,8 @@
     "name": "Jesse Vincent",
     "email": "jesse@fsck.com"
   },
-  "homepage": "https://github.com/obra/superpowers",
-  "repository": "https://github.com/obra/superpowers",
+  "homepage": "https://github.com/toonst/superpowers-embedded",
+  "repository": "https://github.com/toonst/superpowers-embedded",
   "license": "MIT",
   "keywords": ["skills", "tdd", "debugging", "collaboration", "best-practices", "workflows", "embedded", "zephyr", "rtos", "firmware", "arm", "cortex-m", "devicetree", "kconfig", "west"]
 }
