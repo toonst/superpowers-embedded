@@ -1,4 +1,6 @@
-# Superpowers
+# Superpowers — Embedded Edition
+
+A fork of [Superpowers](https://github.com/obra/superpowers) extended with **Zephyr RTOS embedded systems development** skills. Same workflow engine, same discipline — now with domain-specific knowledge for firmware development.
 
 Superpowers is a complete software development workflow for your coding agents, built on top of a set of composable "skills" and some initial instructions that make sure your agent uses them.
 
@@ -118,7 +120,27 @@ Start a new session in your chosen platform and ask for something that should tr
 
 ## What's Inside
 
-### Skills Library
+### Embedded Systems Skills (New)
+
+**Zephyr App Development**
+- **zephyr-app-development** - Project structure, build/flash, Zephyr API patterns (GPIO, SPI, I2C, logging, threads), adapting samples
+- **zephyr-kconfig** - Kconfig reference: prj.conf patterns, custom symbols, merge order, debugging symbol resolution
+- **zephyr-devicetree** - Devicetree reference: overlay syntax, DT macros (DT_ALIAS, DT_NODELABEL, DT_PROP), property access in C
+
+**Embedded Debugging**
+- **embedded-debugging** - cortex-debug VSCode setup (J-Link + OpenOCD), GDB commands, stack overflow detection, memory corruption diagnosis
+- **cortex-m-fault-diagnosis** - ARM Cortex-M fault register decode (CFSR/HFSR), common fault scenarios, diagnosis flowchart
+
+**Build & Workspace**
+- **west-workspace-management** - West manifests, module management, Zephyr version pinning, multi-repo project setup
+
+**Embedded Testing**
+- **embedded-tdd** - TDD for firmware: ztest/native_sim unit tests, pytest HIL over serial, mocking hardware dependencies
+
+**Driver Development**
+- **zephyr-driver-development** - Zephyr device model, DT bindings, DT_INST macros, twister testing, upstream PR workflow, fork management
+
+### Core Skills (from upstream Superpowers)
 
 **Testing**
 - **test-driven-development** - RED-GREEN-REFACTOR cycle (includes testing anti-patterns reference)
@@ -127,7 +149,7 @@ Start a new session in your chosen platform and ask for something that should tr
 - **systematic-debugging** - 4-phase root cause process (includes root-cause-tracing, defense-in-depth, condition-based-waiting techniques)
 - **verification-before-completion** - Ensure it's actually fixed
 
-**Collaboration** 
+**Collaboration**
 - **brainstorming** - Socratic design refinement
 - **writing-plans** - Detailed implementation plans
 - **executing-plans** - Batch execution with checkpoints
@@ -142,9 +164,24 @@ Start a new session in your chosen platform and ask for something that should tr
 - **writing-skills** - Create new skills following best practices (includes testing methodology)
 - **using-superpowers** - Introduction to the skills system
 
+## Embedded Workflow
+
+The embedded skills integrate naturally with the core Superpowers workflow:
+
+1. **brainstorming** → Design your firmware feature
+2. **writing-plans** → Plan references `zephyr-app-development`, `zephyr-kconfig`, `zephyr-devicetree` for Zephyr-specific guidance
+3. **embedded-tdd** → RED-GREEN-REFACTOR with ztest on native_sim, then promote to pytest HIL
+4. **embedded-debugging** / **cortex-m-fault-diagnosis** → When things crash
+5. **west-workspace-management** → Manage your Zephyr workspace, modules, and versions
+6. **zephyr-driver-development** → Write drivers, test with twister, upstream to Zephyr
+
+**Target hardware:** Any board supported by Zephyr — STM32, Nordic nRF, NXP, Raspberry Pi Pico, and more. Board is typically fixed per project.
+
+**Toolchain:** west + CMake + Kconfig, command-line workflow.
+
 ## Philosophy
 
-- **Test-Driven Development** - Write tests first, always
+- **Test-Driven Development** - Write tests first, always — even for firmware
 - **Systematic over ad-hoc** - Process over guessing
 - **Complexity reduction** - Simplicity as primary goal
 - **Evidence over claims** - Verify before declaring success
