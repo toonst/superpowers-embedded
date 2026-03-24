@@ -14,6 +14,7 @@ Writing Zephyr device drivers following the official device model. Covers DT bin
 - zephyr-kconfig (driver Kconfig patterns)
 - embedded-tdd (driver testing approach)
 - west-workspace-management (manifest for fork/upstream)
+- zephyr-contribution-style (upstream coding standards, for in-tree contributions)
 
 ## When to Use
 
@@ -277,16 +278,6 @@ west twister -T tests/drivers/my_sensor/ --retry-failed 2 --report-dir reports/
 ```
 
 ## Upstreaming to Zephyr
-
-### Prerequisites
-
-- [ ] Driver follows Zephyr coding style: `$ZEPHYR_BASE/scripts/checkpatch.pl`
-- [ ] DT binding in `dts/bindings/<subsystem>/`
-- [ ] Vendor prefix in `dts/bindings/vendor-prefixes.txt`
-- [ ] Tests in `tests/drivers/<subsystem>/<driver>/`
-- [ ] Tests pass on native_sim + at least one real board
-- [ ] `MAINTAINERS.yml` entry
-- [ ] Commit messages: `drivers: sensor: my_sensor: add driver for ...`
 
 ### Workflow
 
