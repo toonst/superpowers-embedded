@@ -28,13 +28,25 @@ Thanks!
 
 ## Installation
 
-This is a fork with embedded systems skills. Install from this repo, not the upstream marketplace.
+This is a fork with embedded systems skills. It is **not** in the official marketplace — install directly from GitHub or a local clone.
 
-### Claude Code (from GitHub)
+### Claude Code
+
+**Option A: From GitHub (as a personal marketplace)**
 
 ```bash
-/install-github-plugin toonst/superpowers-embedded
+/plugin marketplace add toonst/superpowers-embedded
+/plugin install superpowers@toonst-superpowers-embedded
 ```
+
+**Option B: From a local clone**
+
+```bash
+git clone https://github.com/toonst/superpowers-embedded.git
+claude --plugin-dir ./superpowers-embedded
+```
+
+During development, use `/reload-plugins` to pick up changes without restarting.
 
 ### Codex
 
