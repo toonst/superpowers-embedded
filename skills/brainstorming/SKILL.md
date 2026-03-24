@@ -114,6 +114,7 @@ digraph brainstorming {
 - Write the validated design (spec) to `docs/superpowers/specs/YYYY-MM-DD-<topic>-design.md`
   - (User preferences for spec location override this default)
 - Use elements-of-style:writing-clearly-and-concisely skill if available
+- **Include a Sources section** when the design was informed by external documentation (APIs, standards, style guides, etc.). List URLs with a brief note on what each covers. This allows the implementing LLM to consult original sources for exact details rather than working solely from your summary, which may have gaps.
 - Commit the design document to git
 
 **Spec Review Loop:**
