@@ -2,10 +2,15 @@
   "name": "superpowers",
   "description": "Core skills library for Claude Code, extended with Zephyr RTOS embedded systems development workflows",
   "version": "5.0.5",
-  "author": {
-    "name": "Jesse Vincent",
-    "email": "jesse@fsck.com"
-  },
+  "authors": [
+    {
+      "name": "Jesse Vincent",
+      "email": "jesse@fsck.com"
+    },
+    {
+      "name": "Toon Stegen"
+    }
+  ],
   "homepage": "https://github.com/toonst/superpowers-embedded",
   "repository": "https://github.com/toonst/superpowers-embedded",
   "license": "MIT",
